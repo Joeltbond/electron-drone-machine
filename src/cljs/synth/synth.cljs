@@ -17,10 +17,12 @@
 (def oscillators (atom {}))
 
 (defn start-note [freq]
-	(let [osc (.createOscillator ctx)]
+	(let [osc (.createOscillator ctx)
+       [gain (.createGain ctx)]]
 		(set! (.-type osc) "sine")
 		(set! (.-value osc.frequency) freq)
 		(.connect osc gain)
+    (.connect gain ctx.destination)
     (.connect vib-amount osc.frequency)
     (.start osc)
 		(swap! oscillators assoc freq osc)))
