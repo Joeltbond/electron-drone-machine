@@ -1,0 +1,30 @@
+html {
+	background: #ddd;
+}
+
+.container {
+	margin-top: 70px;
+}
+
+button {
+	background-color: #333;
+	border: 0;
+	border-radius: 4px;
+	color: white;
+	display: block;
+	font-size: 18px;
+	height: 30px;
+	margin: 0 auto 10px;
+	outline: 0;
+	text-align: center;
+	width: 200px;
+}
+
+button.on {
+	animation: pulse 0.6s linear infinite alternate;
+}
+
+@keyframes pulse {
+	from  {background-color: #5CE4C5;}
+	to {background-color: #4EA09D;}
+}
