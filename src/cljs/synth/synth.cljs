@@ -18,7 +18,7 @@
 
 (defn start-note [freq]
 	(let [osc (.createOscillator ctx)
-       [gain (.createGain ctx)]]
+        gain (.createGain ctx)]
 		(set! (.-type osc) "sine")
 		(set! (.-value osc.frequency) freq)
 		(.connect osc gain)
