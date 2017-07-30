@@ -2,6 +2,10 @@ html {
 	background: #ddd;
 }
 
+body {
+	background-color: inherit;
+}
+
 .container {
 	margin-top: 70px;
 }
